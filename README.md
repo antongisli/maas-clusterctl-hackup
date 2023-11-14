@@ -6,9 +6,9 @@ With that said, this README lists all the steps for posterity.
 
 1. create a local directory e.g. ~/maas-capi, download the [4.1.0 source code](https://github.com/spectrocloud/cluster-api-provider-maas/releases/tag/v4.1.0-spectro) into it and extract it. create a src directory, move the extracted contents into it.
 1. download the 0.4.0 infrastructure-components.yaml file into the ~maas-capi/ folder. Edit it and fix the cert-manager api versions listed in the certificates. 
-  - e.g. `apiVersion: cert-manager.io/v1alpha2` → `apiVersion: cert-manager.io/v1` (at time of writing there were two certificates like this)
-  - in the deployment capmaas-controller-manager you need to change the image
-    `image: gcr.io/spectro-images-public/release/cluster-api-provider-maas/cluster-api-provider-maas-controller:v0.4.0` → `image: gcr.io/spectro-images-public/release/cluster-api-maas/cluster-api-provider-maas-controller:v0.2.0-spectro-4.1.0`
+    - e.g. `apiVersion: cert-manager.io/v1alpha2` → `apiVersion: cert-manager.io/v1` (at time of writing there were two certificates like this)
+    - in the deployment capmaas-controller-manager you need to change the image
+        `image: gcr.io/spectro-images-public/release/cluster-api-provider-maas/cluster-api-provider-maas-controller:v0.4.0` → `image: gcr.io/spectro-images-public/release/cluster-api-maas/cluster-api-provider-maas-controller:v0.2.0-spectro-4.1.0`
 1. download the 0.4.0 ()[]metadata.yaml file and add an entry for 4.1.0:
 
         - major: 4
