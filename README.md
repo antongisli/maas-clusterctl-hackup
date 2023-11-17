@@ -9,7 +9,7 @@ With that said, this README lists all the steps for posterity.
     - e.g. `apiVersion: cert-manager.io/v1alpha2` → `apiVersion: cert-manager.io/v1` (at time of writing there were two certificates like this)
     - in the deployment capmaas-controller-manager you need to change the image
         `image: gcr.io/spectro-images-public/release/cluster-api-provider-maas/cluster-api-provider-maas-controller:v0.4.0` → `image: gcr.io/spectro-images-public/release/cluster-api-maas/cluster-api-provider-maas-controller:v0.2.0-spectro-4.1.0`
-1. download the 0.4.0 ()[]metadata.yaml file and add an entry for 4.1.0:
+1. download the 0.4.0 metadata.yaml file and add an entry for 4.1.0:
 
         - major: 4
             minor: 1
@@ -29,7 +29,7 @@ With that said, this README lists all the steps for posterity.
 
 1. Set the MAAS endpoint and API key env vars
 
-        export MAAS_ENDPOINT 
+        export MAAS_ENDPOINT="<SNIP>"
         export MAAS_API_KEY="<SNIP>"
 
 1. Install clusterctl, make sure you use a recent version.
